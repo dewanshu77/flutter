@@ -1,3 +1,223 @@
+today:
+void main() {
+//oops
+  var superhero = hero("flying","clark");
+  print("${superhero.name} ${superhero.power}");//accessing objects data
+  superhero.hero_specs();
+  var superman  =  hero("climbing", "clark001");
+  print("${superman.name},${superman.power}");//accessing objects data
+  print(superman.power);
+  print(superman.name);
+  superman.hero_specs();
+  
+
+  var object_1 = Class("dell",12); //object//child
+
+  object_1.student(); //student method called
+}
+
+class hero {
+  hero(this.power, this.name);//constructor
+  String power;
+  String name;
+  hero_specs() {
+    print("Heroes name is ${name} and his power is ${power}");
+  }
+}
+
+class Class {
+  //class//parent
+  Class(this.name,this.roll_no);
+  String name;
+  int roll_no;
+
+  student() {
+    print("student method called and name is ${name},roll_no is $roll_no ");
+  }
+}
+//oops
+
+
+// void main(){
+// ternary operator
+//   int a=5;//condition if condition true then boolean value would be true else it would be false
+// bool value=(a>5||a<6)?true :false;
+//   print(value);
+// ternary operator
+// }
+
+// void main() {
+//if else conditionals
+//   int a = 5;
+//   if (a != 5) {
+//     print("5 first");
+//   } //not equal to !=
+//   else if (a == 5 && a != 5) {
+//     print(" 5 found 2nd");
+//   } //two conditions can be checked in one if condition using && which is and
+//   else if (a == 5 || a == 5) {
+//     print(" 5 found latest || or");
+//   } //  || which is or operator is used to check whether this condition is true or another condition is true if any condition becomes true then function executes
+//   else if (a >= 4 && a == 5) {
+//     print(" 5 found 4th");
+//   } //both conditions are true
+//   //if we want only first conditions which came true should run then we should use else if conditional
+//   //else if
+
+//   else {
+//     print("if condition didnt run");
+//   }
+
+//   if else conditionals
+//switch(5){case 5;.......; break;case 2:.......; break;} switch case brake is basically giving a character in switch keyword and getting   match in cases
+// void main() {
+//   switch (7) {
+//     //data given to search in cases
+//     case 2: //match not found
+//       print(2);
+//       break;
+//     case 7: //match found
+//       print(7);
+//       break;
+//     default:
+//       print("match not found");}
+//   } switch(5){case 5;.......; break;case 2:.......; break;} switch case brake is basically giving a character in switch keyword and getting the match in cases
+// }
+
+//  void main() {
+//   List<int> item = [1, 2, 3, 4, 5, 6, 7];
+//   List big = ["aa", "bb", "cc"];
+//   print(big);
+// //   print(item);
+//   //   List.add("");
+//   item.add(17);
+// //     print(item);
+//   big.add(2);
+//   print(big);
+//   List vv;
+
+// }
+// methods in list
+// void main(){
+//   List cc=["aa","bb","cc"];
+//   print(cc);
+//   cc.remove("aa");//removing characters in list
+//   print(cc);
+//   print(cc.isEmpty);//gives boolean value list empty=true else false
+//   print(cc[0]);//indexing in list
+//   for(var item in cc){
+//     print(item);
+//  var cv=cc.map((i)=>i+i).toList();//map method is used with anonymous used in function
+//   print(cv);
+//   cc.forEach((x)=> print(x));//forEach method to run forloop on Lists
+
+//  }
+// void main (){//map is dictionary with key value pair
+//   Map dict={"nm":"ccvola","age":5};
+//   print(dict);
+//   dict["age"]=2;//changing value of keys
+//   print(dict);
+//   dict["id"]=442605;//adding new key value pair
+//   print(dict);
+//   methods in Map
+//    print(dict.length);//number of key value pairs
+//   print(dict.isEmpty);//checks whether dictionary is empty
+//   print(dict.isNotEmpty);//checks whether dictionary is not empty
+//   dict.forEach((k,v){print("$k : $v");});
+
+// }
+// void main() {
+//   int ac = 4;
+//   double cv = 4.4;
+//   String va = "String";
+//   String multia =
+//       '''//multi liner string is used for long strings and is written with the help of {''''''}
+//   ''';
+// //   print(multia);
+//   String cc = "       newline\ncharacter"; //newline character
+// //   print(cc.trim());
+// //   print(cc.isEmpty);
+// print(cc.toUpperCase());
+// }
+//int string doubl
+//bool string double
+
+// void main (){//boolean and conditionals
+// //   bool value=true;
+// //   if(value==true){print("value is $value");}
+// //   else{print("value is false");}
+//   bool b=true;
+
+// //   if(!b){print("it is false");}//!b checking b is not  storing true
+// //   else{print("it is true");}
+//   if(b){print(!b);}//b is true and !b is false
+//   else{print("false");}
+// }
+// void main(){//double and integer
+//   int a=5;
+//   double aa=7.4;
+// //   print(a.isEven);//checks number is even or not and gives boolean value
+// //   print(aa.ceil());//gives the number increased by one number if it is floating number
+// //   print(aa.floor());//gives the base value of floating number 5.4 is 5
+// print(aa.truncate());//removes decimal point including number after decimal point
+// }
+// converting integer into  string and string into integer
+// void main(){
+//   int a=55;
+//   double cc=44.44;
+// //   String aa=a.toString();//changing integer to string
+// //   print(aa);
+// //   //changing string to integer
+// //   print(num.parse(aa));
+// print("${a+cc}");//adding integer with double
+// }
+
+// void main(){
+//   var a=5;//static variable can change datavalue in same datatype
+//   a=4;
+
+//   dynamic namev=4;//dynamic variable can change datavalue in any datatype
+//   print(namev);//namev was first storing integer datatype
+//   namev="string";//namev is now storing another datatype
+//   print(namev);
+// }
+
+// void main(){
+//   var namevc;//it can become dynamic/static variable depending upon datatype in variable when value is entered/changed in future
+//   namevc=5;//at this situation namevc is static variable
+//   print(namevc);
+//   namevc="String";//at this situation namevc has become dynamic variable because value was first 5 integer and now it has changed to "String" String
+//   print(namevc);}
+
+// void main(){
+//   int summultiply =addmultiply(2,5);
+//   print("$summultiply is the summultiply" );
+
+// }
+// int addmultiply(int a,int b) =>a+b*a; = arrow function
+// int addmultiply(int a,int b) =>a+b*a;//only 1 one function can be given not more than one =a+b;b*b;
+
+// void main() {
+//   manager(qnty:5,unit:"pcs",item:"pant");
+// }
+
+// manager({int qnty, String unit, String item}) {
+//   print("$qnty $unit of $item are ready");}
+// void main() {
+//   add(3,4);
+
+//   }
+
+// add(int a,int b){
+//   print(a+b);
+// }
+// int a=4;
+// String d="4";
+// double b=2.1;
+
+today:
+
+
 today:void main(){
 // ternary operator
   int a=5;//condition if condition true then boolean value would be true else it would be false
